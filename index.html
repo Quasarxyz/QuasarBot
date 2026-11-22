@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QuasarBot - The partnership bot for Discord</title>
-<meta name="description" content="QuasarBot checks partnership ads, gives your partner the Rep Role, and takes it back when the ad is deleted. Plus join protection, welcome messages, auto responders and more.">
+<meta name="description" content="QuasarBot checks partnership ads, gives your partner the Rep Role, and takes it back when the ad is deleted. Plus join protection and a trap channel.">
 <meta name="theme-color" content="#1e1f22">
 <meta property="og:title" content="QuasarBot - The partnership bot for Discord">
 <meta property="og:description" content="Track partnership ads, manage your Rep Role and protect your server.">
@@ -193,7 +193,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
       <a href="#faq">FAQ</a>
       <a href="https://discord.gg/kXwAQRNq2d">Support</a>
     </nav>
-    <a class="btn btn--sm" data-invite href="https://discord.com/oauth2/authorize?client_id=1455404194348662848&permissions=268823751&scope=bot%20applications.commands">Add to Discord</a>
+    <a class="btn btn--sm" data-invite href="https://discord.com/oauth2/authorize?client_id=1455404194348662848&permissions=275146730631&scope=bot%20applications.commands">Add to Discord</a>
   </div>
 </header>
 
@@ -204,7 +204,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
     <h1>The <span class="grad">partnership bot</span> for your Discord server</h1>
     <p class="lead">Track partnership ads, give out your Rep Role automatically, and keep raiders and bot accounts out. Set it up in a few minutes.</p>
     <div class="hero__cta">
-      <a class="btn" data-invite href="https://discord.com/oauth2/authorize?client_id=1455404194348662848&permissions=268823751&scope=bot%20applications.commands">Add to Discord</a>
+      <a class="btn" data-invite href="https://discord.com/oauth2/authorize?client_id=1455404194348662848&permissions=275146730631&scope=bot%20applications.commands">Add to Discord</a>
       <a class="btn btn--dark" href="https://discord.gg/kXwAQRNq2d">Support server</a>
     </div>
 
@@ -234,12 +234,6 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
         <h3>Join-and-leave protection</h3><p>Ban anyone who joins and leaves within 24 hours. Moderator kicks are left alone.</p></article>
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9l14.2 14.2"/></svg></div>
         <h3>Trap channel</h3><p>Pick a channel nobody should post in. Hacked accounts and spam bots that do get banned or kicked. Staff are exempt.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 3.9 11.5 8.5 8.5 0 0 1 12.4 3 8.4 8.4 0 0 1 21 11.5z"/></svg></div>
-        <h3>Welcome messages</h3><p>Greet new members in a channel, in DMs, or both. With Membership Screening, it waits until they accept the rules.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 10l-5 5 5 5"/><path d="M20 4v7a4 4 0 0 1-4 4H4"/></svg></div>
-        <h3>Auto responders</h3><p>Reply to trigger words in one channel or everywhere. Use variables like <code>{user}</code> and <code>{server}</code>.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
-        <h3>Auto reactions</h3><p>Add emojis to every new message in a channel, great for polls and suggestions.</p></article>
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
         <h3>Daily scan</h3><p>Once a day the bot checks the ad channel again and fixes roles it missed. It follows your own timezone.</p></article>
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></div>
@@ -272,24 +266,15 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
     <div class="cats" id="cats" role="group" aria-label="Filter by group">
       <button class="tab" type="button" data-c="all" aria-pressed="true">All</button>
       <button class="tab" type="button" data-c="setup" aria-pressed="false">Setup</button>
-      <button class="tab" type="button" data-c="ads" aria-pressed="false">Partnerships</button>
-      <button class="tab" type="button" data-c="community" aria-pressed="false">Community</button>
       <button class="tab" type="button" data-c="util" aria-pressed="false">Utility</button>
     </div>
     <div class="cmds" id="cmds">
       <div class="cmd" data-c="setup"><button type="button">/setup</button><div><b>Setup wizard</b><small>Admin</small><p>Channels, roles and protections. Nothing saves until you press Save Changes.</p></div></div>
       <div class="cmd" data-c="setup"><button type="button">/config</button><div><b>View settings</b><small>Admin</small><p>Shows your settings and anything that needs fixing.</p></div></div>
       <div class="cmd" data-c="setup"><button type="button">/timezone</button><div><b>Set timezone</b><small>Admin</small><p>Sets the time for the daily check, like <code>Asia/Manila</code>.</p></div></div>
-      <div class="cmd" data-c="ads"><button type="button">/post</button><div><b>Post an ad</b><p>Posts your ad, mentions your partner and gives them the Rep Role. One a minute.</p></div></div>
-      <div class="cmd" data-c="community"><button type="button">/autoresponder</button><div><b>Auto responders</b><small>Admin</small><p>Add, edit, remove or list replies to trigger words.</p></div></div>
-      <div class="cmd" data-c="community"><button type="button">/autoreact</button><div><b>Auto reactions</b><small>Admin</small><p>Pick emojis the bot adds to every new message in a channel.</p></div></div>
-      <div class="cmd" data-c="community"><button type="button">/set-welcome</button><div><b>Set welcome message</b><small>Admin</small><p>Sets the welcome channel and message.</p></div></div>
-      <div class="cmd" data-c="community"><button type="button">/test-welcome</button><div><b>Preview welcome</b><small>Admin</small><p>See the welcome message before anyone else does.</p></div></div>
-      <div class="cmd" data-c="community"><button type="button">/welcome-config</button><div><b>Welcome settings</b><small>Admin</small><p>Shows your current welcome settings.</p></div></div>
-      <div class="cmd" data-c="community"><button type="button">/remove-welcome</button><div><b>Remove welcome</b><small>Admin</small><p>Turns welcome messages off.</p></div></div>
       <div class="cmd" data-c="util"><button type="button">/help</button><div><b>Help menu</b><p>A guide for each feature.</p></div></div>
       <div class="cmd" data-c="util"><button type="button">/invite</button><div><b>Invite the bot</b><p>Link to add QuasarBot to another server.</p></div></div>
-      <div class="cmd" data-c="util"><button type="button">/report</button><div><b>Get support</b><p>Opens a private ticket. Close it with <code>/close</code>.</p></div></div>
+      <div class="cmd" data-c="util"><button type="button">/report</button><div><b>Get support</b><p>Opens a private support ticket.</p></div></div>
       <div class="cmd" data-c="util"><button type="button">/vote</button><div><b>Vote</b><p>Vote for QuasarBot on top.gg.</p></div></div>
       <div class="cmd" data-c="util"><button type="button">/about</button><div><b>About</b><p>Uptime, server count and legal links.</p></div></div>
     </div>
@@ -308,7 +293,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
       <div class="perm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Manage Messages</b><span>Delete ads with no valid partner.</span></div></div>
       <div class="perm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Ban and Kick Members</b><span>Join protection, the trap channel and rep leave action.</span></div></div>
       <div class="perm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>View Audit Log</b><span>Tell a moderator's kick from someone leaving.</span></div></div>
-      <div class="perm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Read, Send, Embed, Attach, React</b><span>View channels and history, send messages, embed links, attach files, add reactions and use external emojis.</span></div></div>
+      <div class="perm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Read, Send, Embed, Attach</b><span>View channels and history, send messages (threads included), embed links, attach files and use external emojis.</span></div></div>
       <div class="perm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Create Invite</b><span>Lets the developer get in and help if something breaks.</span></div></div>
     </div>
   </div>
@@ -321,7 +306,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
       <details><summary>The Rep Role is not being given out</summary><p>Usually QuasarBot's own role sits below the Rep Role. Open Server Settings, then Roles, and drag QuasarBot above it. Run <code>/config</code> and it lists anything else that is wrong.</p></details>
       <details><summary>Who can use the setup commands?</summary><p>The server owner and anyone with the Manage Server permission. Staff with Manage Messages are never counted as ad partners, and they are exempt from the trap channel.</p></details>
       <details><summary>Do I have to use the bans?</summary><p>No. Join-and-leave protection is a switch in <code>/setup</code>, the trap channel only works if you pick one, and the rep leave action can just delete ads without banning.</p></details>
-      <details><summary>What happens if I remove the bot?</summary><p>QuasarBot deletes your server's settings, tracked ads, responders, reactions and welcome message.</p></details>
+      <details><summary>What happens if I remove the bot?</summary><p>QuasarBot deletes your server's settings and tracked ads.</p></details>
       <details><summary>What data does it store?</summary><p>Your server's settings and the ads it tracks. Read the full details in the <a href="privacy.html">Privacy Policy</a>.</p></details>
       <details><summary>Something is broken. Where do I get help?</summary><p>Run <code>/report</code> to open a private ticket, or ask in the <a href="https://discord.gg/kXwAQRNq2d">support server</a>.</p></details>
     </div>
@@ -332,7 +317,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
   <div class="cta">
     <h2>Ready to tidy up your partnerships?</h2>
     <p>Add QuasarBot to your server and run <code>/setup</code>.</p>
-    <a class="btn btn--light" data-invite href="https://discord.com/oauth2/authorize?client_id=1455404194348662848&permissions=268823751&scope=bot%20applications.commands">Add to Discord</a>
+    <a class="btn btn--light" data-invite href="https://discord.com/oauth2/authorize?client_id=1455404194348662848&permissions=275146730631&scope=bot%20applications.commands">Add to Discord</a>
   </div>
 </section>
 </main>
@@ -372,13 +357,7 @@ footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:96px}
     {label:"Ad with no mention", chan:"partnerships", steps:[
       {at:300,  add:{id:"a", who:"kiwi", text:"come join our gaming server!! we have events every week, link in bio"}},
       {at:1900, gone:"a"},
-      {at:2300, add:{who:"QuasarBot", bot:1, text:"@kiwi **Your ad was removed.**\nYou didn't mention a valid user. Type `@` and pick them from the popup, or use `/post` and the bot will do it for you."}}
-    ]},
-    {label:"Using /post", chan:"partnerships", steps:[
-      {at:300,  sys:"kiwi used /post"},
-      {at:1100, add:{who:"QuasarBot", bot:1, text:"Only you can see this.", embed:{t:"Ad Posted", rows:[["Partner","@mango"],["Rep Role","granted"]]}}},
-      {at:2400, add:{who:"QuasarBot", bot:1, text:"> @mango\n\nWe run a small art server with weekly challenges. Come draw with us."}},
-      {at:3500, add:{who:"QuasarBot", bot:1, where:"in #mod-log", embed:{t:"Partnership Logged", rows:[["Author","@kiwi"],["Partnered With","@mango"]]}}}
+      {at:2300, add:{who:"QuasarBot", bot:1, text:"@kiwi **Your ad was removed.**\nYou didn't mention a valid user. Type `@` and pick them from the popup."}}
     ]},
     {label:"Deleting an ad", chan:"partnerships", steps:[
       {at:200,  add:{id:"b", who:"kiwi", text:"@mango partnered up with us! Weekly art challenges at their place."}},
